@@ -1,150 +1,384 @@
-<div align="center">
+# 🚑 LifeLineX
 
-<img src="https://img.shields.io/badge/LifeLineX-Emergency%20Healthcare%20Platform-red?style=for-the-badge&logo=heart&logoColor=white" alt="LifeLineX Banner" />
+### AI-Powered Emergency Healthcare Platform
 
-<h1>🚑 LifeLineX</h1>
-<h3><em>AI-Powered Real-Time Emergency Healthcare & Resource Dispatch Platform</em></h3>
+**One Platform. Every Emergency. Faster Healthcare Support.**
 
-<p>
-  <a href="https://github.com/RAGUL-TR07/LifeLinex/stargazers"><img src="https://img.shields.io/github/stars/RAGUL-TR07/LifeLinex?style=flat-square&color=FFD700" alt="Stars" /></a>
-  <a href="https://github.com/RAGUL-TR07/LifeLinex/network/members"><img src="https://img.shields.io/github/forks/RAGUL-TR07/LifeLinex?style=flat-square&color=0ea5e9" alt="Forks" /></a>
-  <a href="https://github.com/RAGUL-TR07/LifeLinex/issues"><img src="https://img.shields.io/github/issues/RAGUL-TR07/LifeLinex?style=flat-square&color=ef4444" alt="Issues" /></a>
-  <img src="https://img.shields.io/badge/Node.js-Express%205-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/Socket.IO-Real--time-010101?style=flat-square&logo=socket.io" alt="Socket.IO" />
-  <img src="https://img.shields.io/badge/TypeScript-Strict-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
-</p>
+LifeLineX is an AI-powered, real-time emergency healthcare platform that connects patients, hospitals, ambulance providers, blood banks, pharmacies, NGOs, volunteers, donors, and other healthcare organizations through one unified ecosystem. It brings emergency response, healthcare resources, financial assistance, community support, AI-based matching, real-time coordination, and centralized administration together in a single platform.
 
-<p>
-  <b>LifeLineX</b> connects patients, volunteers, blood donors, hospitals, ambulance providers, and NGOs into one unified emergency-response ecosystem — powered by real-time websockets, AI-assisted dispatch, and a multi-role portal architecture.
-</p>
-
-</div>
+🌐 **Fully Multilingual** — English + Tamil across the entire platform
 
 ---
 
-## 📋 Table of Contents
+## 🎯 The Problem
 
-- [✨ Features](#-features)
-- [🏗️ Architecture](#️-architecture)
-- [🧩 Portal Modules](#-portal-modules)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [🚀 Getting Started](#-getting-started)
-- [⚙️ Environment Variables](#️-environment-variables)
-- [📡 API Reference](#-api-reference)
-- [🔌 WebSocket Events](#-websocket-events)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+During an emergency, patients may need blood, an ambulance, a suitable hospital, medicines, financial assistance, equipment, or volunteers at the same time. Fragmented services make finding and coordinating these resources difficult, leading to delays and communication gaps.
+
+LifeLineX solves this by bringing these services into one connected, real-time platform.
 
 ---
 
-## ✨ Features
+## 🔐 Access & Authentication
 
-| Category | Capability |
-|---|---|
-| 🚨 **Emergency SOS** | One-tap SOS dispatch with real-time GPS tracking and ambulance routing |
-| 🩸 **Blood Donation** | AI-powered blood type matching between donors and recipients |
-| 🏥 **Hospital Management** | Live bed availability, ICU tracking, and inventory control |
-| 🚑 **Ambulance Dispatch** | Fleet tracking, ETA estimation, and RapidCare booking system |
-| 💊 **Medicine & Equipment** | Request, donate, and track medical supplies and equipment |
-| 💳 **Medical Crowdfunding** | Campaign creation with Razorpay payment gateway integration |
-| 🤝 **Volunteer Network** | NGO-managed volunteer coordination with task assignment workflows |
-| 👨‍💼 **Admin Dashboard** | Verification queues, analytics, activity logs, and full platform oversight |
-| 🔐 **Multi-Role Auth** | JWT + Google OAuth 2.0 with role-based access control (RBAC) |
-| 🌐 **Multi-language** | English & Tamil UI support via i18n |
-| 📧 **Notifications** | In-app + email (SMTP/Nodemailer) + Firebase Cloud Messaging (FCM) push alerts |
-| 📊 **Analytics** | Real-time charts (Recharts) for platform usage and emergency trends |
+LifeLineX provides two primary portals.
+
+### 👤 User Portal
+
+Individual users can:
+
+- Sign up and sign in with credentials
+- Create emergency requests
+- Find blood, ambulances, hospitals and medicines
+- Create and support medical crowdfunding
+- Become blood donors or volunteers
+- Donate medicines and medical equipment
+- Communicate with organizations
+- Track requests and view history
+
+### 🏢 Organization Portal
+
+Healthcare organizations can register as:
+
+- Hospitals
+- Ambulance Providers
+- Blood Banks
+- Pharmacies
+- NGOs
+- Volunteer Organizations
+- Medical Equipment Providers
+
+Organizations follow a controlled verification process:
+
+```
+Signup → Details & Documents → Admin Review → Approval → Account Activation → Login
+```
+
+Only admin-approved organizations can sign in and access organization services.
+
+---
+
+## 🌏 English + Tamil
+
+The complete platform is multilingual, including:
+
+- Login • Signup • Dashboard
+- Emergency Services • Modules • Forms
+- Notifications • Communication
+- Admin Portal
+
+Users can switch between English and Tamil (தமிழ்) throughout the platform.
+
+---
+
+## 🧩 Six Core Modules
+
+After login, users can access six major healthcare modules.
+
+### 🩸 1. Blood Donation
+
+Connects patients with compatible blood donors and blood banks.
+
+- Blood requests
+- Blood-group compatibility
+- Nearby verified donors
+- Availability and eligibility
+- Donation history
+- AI-powered donor matching
+- Real-time donor notifications
+
+### 🚑 2. Find Ambulance
+
+Helps users locate and request available ambulances.
+
+- Nearby ambulance discovery
+- Emergency booking
+- Smart assignment
+- Driver information
+- ETA
+- Live tracking
+- Hospital destination
+- Real-time status
+
+### 🏥 3. Find Hospital
+
+Helps users find suitable hospitals based on their emergency requirements.
+
+- Nearby hospitals
+- Hospital services
+- Bed/ICU availability
+- Oxygen and blood availability
+- Medical specialties
+- Emergency facilities
+- AI-based hospital recommendation
+
+### 💰 4. Medical Crowdfunding
+
+Provides financial assistance for medical treatment.
+
+- Fundraising campaigns
+- Patient/treatment information
+- Document verification
+- Campaign approval
+- Online donations
+- Fund tracking
+- Donation history
+- Transaction records
+- Sponsor support
+
+### 💊 5. Medicine & Pharmacy
+
+Connects users with nearby pharmacies and medicine availability.
+
+- Medicine search
+- Nearby pharmacies
+- Stock checking
+- Medicine requests
+- Prescription upload
+- Reservation
+- Home delivery
+- Medicine donation
+- Hospital/NGO medicine support
+
+### 👥 6. Volunteer & Community Support
+
+Creates a community-driven emergency support network.
+
+Volunteers can assist with:
+
+- Blood • Medicine • Ambulance • Hospital
+- Patient Guidance • Equipment • Medical Camps
+- Disaster Relief • Health Awareness • Elderly Assistance
+- Fundraising • Community Outreach
+
+Volunteers can manage availability, tasks, hours, contributions, achievements, certificates, and community impact.
+
+---
+
+## 🤖 AI Decision Engine
+
+AI acts as the intelligent decision-support and matching layer of LifeLineX.
+
+**AI capabilities:**
+
+- 🚨 Emergency priority classification
+- 🏥 Smart hospital recommendation
+- 🩸 Blood donor matching
+- 🚑 Ambulance recommendation
+- 👥 Volunteer matching
+- 💊 Healthcare resource recommendation
+- 🔎 Fraud/anomaly detection
+- 📊 Demand prediction
+- 💬 Multilingual AI assistance
+
+AI considers factors such as location, availability, compatibility, resources, skills, verification, emergency priority, response history, and workload to help identify suitable resources.
+
+> AI supports healthcare coordination and decision-making; it does not replace medical professionals.
+
+---
+
+## 🤝 NGO & Community Coordination
+
+Approved NGOs can manage volunteers and coordinate community healthcare activities.
+
+They can:
+
+- Add individual or bulk volunteers
+- Manage volunteer profiles
+- Monitor availability
+- Create emergency/community tasks
+- Assign volunteers
+- Track task progress
+- Monitor volunteer hours and activities
+- Coordinate with hospitals, blood banks, ambulances, pharmacies, patients, and other organizations
+
+---
+
+## ⚡ Real-Time Emergency Coordination
+
+LifeLineX connects emergency requests with suitable resources in real time:
+
+```
+Emergency Need
+      ↓
+Request Creation
+      ↓
+AI Decision Engine
+      ↓
+Smart Matching & Ranking
+      ↓
+Hospital / Blood / Ambulance / Pharmacy / Volunteer / NGO
+      ↓
+Real-Time Notification
+      ↓
+Request Accepted
+      ↓
+Live Coordination
+      ↓
+Service Completed
+      ↓
+History & Feedback
+```
+
+Real-time updates can cover emergency requests, blood requests, ambulance assignments, volunteer tasks, request status, task progress, and live ambulance locations.
+
+---
+
+## 📍 Location-Based Services
+
+Location services help users discover nearby:
+
+- Hospitals • Blood Donors • Blood Banks
+- Ambulances • Pharmacies • Volunteers
+- Healthcare Organizations
+
+Resources can be prioritized using distance, availability, suitability, and emergency requirements.
+
+---
+
+## 💬 Communication & Notifications
+
+### Communication
+
+- In-app chat
+- Emergency communication
+- Patient–hospital communication
+- Volunteer/NGO coordination
+- Voice communication
+- Video communication
+
+### Notifications
+
+- Emergency alerts
+- Blood requests
+- Ambulance assignments
+- Volunteer tasks
+- Request updates
+- Organization approvals
+- Donation and crowdfunding updates
+- Administrative alerts
+
+---
+
+## 💳 Payments, Donations & Verification
+
+LifeLineX supports:
+
+- Medical crowdfunding
+- Patient support
+- Donations
+- Sponsorship
+- Healthcare-related payments
+- Transaction history
+- Payment receipts
+
+Verification supports identity, organizations, hospitals, blood banks, ambulance providers, NGOs, volunteers, and crowdfunding campaigns through document submission and administrative review.
+
+---
+
+## 🛡️ Centralized Admin Control
+
+The Admin Portal monitors the entire LifeLineX ecosystem.
+
+Admin has centralized visibility and control over:
+
+- Users • Organizations • Hospitals
+- Ambulances • Blood Banks • Pharmacies
+- Volunteers • NGOs • Emergencies
+- Blood Requests • Medicine Requests • Crowdfunding
+- Donations • Transactions • Notifications
+- Verification • Reports • Platform Activity
+
+**Admin can:**
+
+- Approve/reject organizations
+- Verify documents
+- Manage users and organizations
+- Monitor hospital resources
+- Monitor ambulance activity and tracking
+- Monitor blood donors and requests
+- Monitor pharmacies and medicine requests
+- Monitor volunteers and NGO activities
+- Review crowdfunding campaigns
+- Monitor donations and transactions
+- Identify suspicious activity
+- Suspend/deactivate accounts
+- Monitor emergency requests
+- Track overall platform activity
+
+Everything happening throughout LifeLineX can be monitored and managed through the Admin Portal.
 
 ---
 
 ## 🏗️ Architecture
 
-> See the full interactive diagram in [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                         👥 User Roles                               │
-│     Patients  │  Volunteers/Donors  │  Hospitals  │  Admins         │
-└──────────────────────────┬──────────────────────────────────────────┘
-                           │
-┌──────────────────────────▼──────────────────────────────────────────┐
-│              💻 Frontend (React 19 + TanStack Start)                │
-│          SSR · TanStack Router · Tailwind CSS · Recharts            │
-│                   Socket.IO Client (Real-time)                      │
-└─────────────┬───────────────────────────────────┬───────────────────┘
-              │  REST API (HTTP)                   │  WebSocket
-┌─────────────▼───────────────────────────────────▼───────────────────┐
-│              ⚡ Backend (Express 5 + Socket.IO)                     │
-│   Auth · SOS · Blood · Hospital · Ambulance · Volunteer · Admin     │
-│         Campaign · Medicine · Equipment · Analytics · Chat          │
-└────────────────────────────┬────────────────────────────────────────┘
-                             │
-┌────────────────────────────▼────────────────────────────────────────┐
-│              🗄️ Data & External Services                            │
-│  MongoDB Atlas (Mongoose ODM) │ Razorpay │ Cloudinary               │
-│  Nodemailer (SMTP) │ Google OAuth 2.0 │ Firebase FCM │ Gemini AI    │
-└─────────────────────────────────────────────────────────────────────┘
+                 LIFE LINEX
+                     │
+        ┌────────────┼────────────┐
+        ↓            ↓            ↓
+      USER       ORGANIZATION    ADMIN
+     PORTAL         PORTAL       PORTAL
+        └────────────┼────────────┘
+                     ↓
+          React + TypeScript
+                     ↓
+        REST API + Socket.io
+                     ↓
+              Service Layer
+                     ↓
+        ┌────────────┴────────────┐
+        ↓                         ↓
+   AI Decision Engine        Real-Time Engine
+        └────────────┬────────────┘
+                     ↓
+               MongoDB Atlas
 ```
 
 ---
 
-## 🧩 Portal Modules
+## 🗄️ Core Data
 
-LifeLineX supports **9 distinct role-based portals**, each with tailored dashboards:
+The platform manages data for:
 
-| Portal | Role | Key Capabilities |
-|---|---|---|
-| 🏠 **User / Patient** | Individual | SOS trigger, blood request, volunteer tasks, medicine request, fundraising |
-| 🏥 **Hospital** | Organization | Bed management, emergency intake, inventory, staff coordination |
-| 🩸 **Blood Bank** | Organization | Donor registry, blood stock, request fulfillment |
-| 🚑 **Ambulance Provider** | Organization | Fleet management, dispatch, real-time GPS tracking |
-| 💊 **NGO / Non-Profit** | Organization | Volunteer dispatch, medicine donation, community outreach |
-| 💳 **Fundraising** | All | Campaign creation, donation tracking, Razorpay checkout |
-| 👨‍💼 **Admin** | Super Admin | Platform verification, analytics, user management, global logs |
-| 👤 **Profile** | All | Role-specific settings, emergency contacts, medical records |
-| 🌍 **Community** | All | Chat rooms, public volunteer listings |
+- Users • Organizations • Hospitals
+- Blood Donors • Blood Requests • Blood Banks
+- Ambulances • Pharmacies • Medicines
+- Volunteers • NGOs • Crowdfunding
+- Donations • Medical Equipment • Emergencies
+- Notifications • Transactions • Verification
 
 ---
 
-## 🛠️ Tech Stack
+## 🔐 Security
 
-### Frontend
-| Technology | Purpose |
-|---|---|
-| **React 19** | UI framework with concurrent features |
-| **TanStack Start** | Full-stack SSR framework |
-| **TanStack Router** | File-based type-safe routing |
-| **Tailwind CSS** | Utility-first styling |
-| **Recharts** | Data visualization & analytics charts |
-| **Socket.IO Client** | Real-time bi-directional communication |
-| **TypeScript** | Strict type safety throughout |
+- JWT Authentication
+- Google OAuth
+- OTP Verification
+- Password Hashing
+- Access Control
+- Organization Approval
+- Document Verification
+- API Security
+- Rate Limiting
+- CORS Protection
+- Activity Monitoring
 
-### Backend
-| Technology | Purpose |
-|---|---|
-| **Node.js + Express 5** | REST API gateway |
-| **Socket.IO** | WebSocket server for live dispatch |
-| **MongoDB Atlas + Mongoose** | Document database with ODM |
-| **Passport.js** | Authentication strategies |
-| **JWT** | Access & refresh token auth |
-| **Helmet + Rate Limiter** | Security hardening |
-| **Swagger (OpenAPI 3.0)** | Auto-generated API documentation |
-| **Winston + Morgan** | Structured logging |
-| **Jest** | Unit & integration testing |
+---
 
-### External Services
-| Service | Purpose |
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
 |---|---|
-| **Google OAuth 2.0** | Social sign-in |
-| **Razorpay** | Payment gateway for crowdfunding |
-| **Cloudinary** | Document & image CDN |
-| **Nodemailer (SMTP/Gmail)** | Email alerts & OTP delivery |
-| **Firebase FCM** | Push notifications |
-| **Google Gemini AI** | AI-assisted emergency triage |
-| **Twilio** | SMS / OTP delivery |
+| **Frontend** | HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS |
+| **Backend** | Node.js, Express.js, TypeScript, REST APIs |
+| **Real-Time** | Socket.io |
+| **Database** | MongoDB Atlas, Mongoose |
+| **AI** | Google Gemini API |
+| **Authentication** | JWT, Google OAuth, OTP |
+| **Location** | Google Maps API, Geolocation |
+| **Storage** | Cloudinary |
+| **Payments** | Razorpay |
+| **Notifications** | Firebase FCM, Email, SMS |
 
 ---
 
@@ -152,286 +386,80 @@ LifeLineX supports **9 distinct role-based portals**, each with tailored dashboa
 
 ```
 LifeLineX/
-├── 📄 README.md
-├── 📄 ARCHITECTURE.md
-├── 🖼️ architecture_diagram.png
-│
-├── 🖥️ frontend/                    # React 19 + TanStack Start App
-│   ├── src/
-│   │   ├── routes/                 # File-based page routes
-│   │   │   ├── index.tsx           # Landing / Home page
-│   │   │   ├── login.tsx           # Unified login portal
-│   │   │   ├── profile.tsx         # Role-specific profile dashboard
-│   │   │   ├── emergency.tsx       # Emergency SOS & tracking
-│   │   │   ├── blood.tsx           # Blood donation portal
-│   │   │   ├── hospitals.tsx       # Hospital management portal
-│   │   │   ├── ambulance.tsx       # Ambulance dispatch portal
-│   │   │   ├── volunteer.tsx       # Volunteer coordination
-│   │   │   ├── medicine.tsx        # Medicine & equipment portal
-│   │   │   ├── fundraising.tsx     # Medical crowdfunding
-│   │   │   ├── community.tsx       # Community & chat
-│   │   │   ├── admin.index.tsx     # Admin dashboard
-│   │   │   └── verify.tsx          # Email verification
-│   │   ├── components/             # Reusable UI components
-│   │   ├── context/                # React context providers
-│   │   ├── hooks/                  # Custom React hooks
-│   │   └── lib/                   # Utilities, i18n, API clients
-│   ├── public/                     # Static assets
-│   ├── package.json
-│   └── vite.config.ts
-│
-├── ⚙️ backend/                     # Express 5 + Socket.IO API
-│   ├── src/
-│   │   ├── app.ts                  # Express app setup & middleware
-│   │   ├── server.ts               # HTTP + Socket.IO server entry
-│   │   ├── config/                 # Environment config & Passport
-│   │   ├── controllers/            # Request/response handlers (thin layer)
-│   │   ├── services/               # Core business logic
-│   │   ├── models/                 # Mongoose schemas (19 models)
-│   │   │   ├── User.ts
-│   │   │   ├── Emergency.ts
-│   │   │   ├── BloodRequest.ts / BloodDonation.ts
-│   │   │   ├── Ambulance.ts / AmbulanceBooking.ts
-│   │   │   ├── FundraisingCampaign.ts
-│   │   │   ├── Organization.ts
-│   │   │   ├── MedicalRecord.ts / MedicalEquipment.ts
-│   │   │   ├── MedicineDonation.ts
-│   │   │   ├── GovernmentScheme.ts
-│   │   │   ├── ChatRoom.ts / Message.ts
-│   │   │   ├── Notification.ts
-│   │   │   ├── Transaction.ts
-│   │   │   ├── ActivityLog.ts
-│   │   │   └── OTP.ts / RefreshToken.ts
-│   │   ├── routes/                 # 17 API route modules
-│   │   ├── middlewares/            # Auth, error handling, validation
-│   │   ├── repositories/           # Data access layer
-│   │   ├── socket/                 # Socket.IO event handlers
-│   │   ├── jobs/                   # Background scheduled jobs
-│   │   ├── validators/             # Request validation schemas
-│   │   ├── utils/                  # Logger, helpers, formatters
-│   │   ├── constants/              # Shared constants
-│   │   └── tests/                  # Jest test suites
-│   ├── .env.example                # Environment variable template
-│   ├── package.json
-│   └── tsconfig.json
-│
-└── package.json                    # Root workspace config
+├── lifelinex-frontend/
+├── lifelinex-backend/
+│   └── src/
+│       ├── config/
+│       ├── models/
+│       ├── repositories/
+│       ├── services/
+│       ├── controllers/
+│       ├── routes/
+│       ├── middlewares/
+│       ├── validators/
+│       ├── socket/
+│       ├── jobs/
+│       ├── utils/
+│       ├── tests/
+│       ├── app.ts
+│       └── server.ts
+├── docs/
+└── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🔄 Complete Platform Flow
 
-### Prerequisites
-
-- **Node.js** ≥ 18.x
-- **npm** ≥ 9.x (or **Bun** for the frontend)
-- **MongoDB Atlas** account (or local MongoDB)
-- A configured `.env` file for the backend (see [Environment Variables](#️-environment-variables))
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/RAGUL-TR07/LifeLinex.git
-cd LifeLinex
 ```
-
-### 2. Setup the Backend
-
-```bash
-cd backend
-npm install
-
-# Copy the example env file and fill in your values
-cp .env.example .env
-
-# Run in development mode
-npm run dev
-```
-
-The API will start at **`http://localhost:5000`**
-Swagger docs available at **`http://localhost:5000/api-docs`**
-
-### 3. Setup the Frontend
-
-```bash
-cd frontend
-npm install   # or: bun install
-
-# Run the dev server
-npm run dev   # or: bun run dev
-```
-
-The app will be available at **`http://localhost:5173`**
-
-### 4. (Optional) Install Root Workspace
-
-```bash
-# From the project root
-npm install
+                 SIGNUP
+                    ↓
+          ┌─────────┴─────────┐
+          ↓                   ↓
+        USER             ORGANIZATION
+          │                   │
+          │              ADMIN APPROVAL
+          │                   │
+          │                APPROVED
+          │                   │
+          └─────────┬─────────┘
+                    ↓
+                  LOGIN
+                    ↓
+               DASHBOARD
+                    ↓
+        Six Healthcare Modules
+                    ↓
+                AI ENGINE
+                    ↓
+             SMART MATCHING
+                    ↓
+           REAL-TIME RESPONSE
+                    ↓
+             SERVICE DELIVERY
+                    ↓
+             HISTORY / FEEDBACK
+                    ↓
+            ADMIN MONITORING
 ```
 
 ---
 
-## ⚙️ Environment Variables
+## 🚀 Future Enhancements
 
-Create a `backend/.env` file based on `backend/.env.example`. All required variables are listed below:
-
-```env
-# ── Server ────────────────────────────────────────────
-NODE_ENV=development
-PORT=5000
-API_PREFIX=/api/v1
-FRONTEND_URL=http://localhost:5173
-
-# ── Database ──────────────────────────────────────────
-MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/<dbname>
-
-# ── JWT ───────────────────────────────────────────────
-JWT_ACCESS_SECRET=<your_access_secret>
-JWT_REFRESH_SECRET=<your_refresh_secret>
-JWT_ACCESS_EXPIRES_IN=30d
-JWT_REFRESH_EXPIRES_IN=30d
-
-# ── Google OAuth ──────────────────────────────────────
-GOOGLE_CLIENT_ID=<your_google_client_id>
-GOOGLE_CLIENT_SECRET=<your_google_client_secret>
-GOOGLE_CALLBACK_URL=http://localhost:5000/api/v1/auth/google/callback
-
-# ── Email (SMTP) ──────────────────────────────────────
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=<your_email>
-SMTP_PASS=<your_app_password>
-EMAIL_FROM=LifeLineX <your_email>
-
-# ── Cloudinary ────────────────────────────────────────
-CLOUDINARY_CLOUD_NAME=<cloud_name>
-CLOUDINARY_API_KEY=<api_key>
-CLOUDINARY_API_SECRET=<api_secret>
-
-# ── Razorpay ──────────────────────────────────────────
-RAZORPAY_KEY_ID=<key_id>
-RAZORPAY_KEY_SECRET=<key_secret>
-RAZORPAY_WEBHOOK_SECRET=<webhook_secret>
-
-# ── Gemini AI ─────────────────────────────────────────
-GEMINI_API_KEY=<your_gemini_api_key>
-
-# ── Firebase (FCM) ────────────────────────────────────
-FIREBASE_PROJECT_ID=<project_id>
-FIREBASE_CLIENT_EMAIL=<client_email>
-FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
-
-# ── Twilio (SMS/OTP) ──────────────────────────────────
-TWILIO_ACCOUNT_SID=<sid>
-TWILIO_AUTH_TOKEN=<auth_token>
-TWILIO_PHONE_NUMBER=<phone>
-
-# ── Rate Limiting ─────────────────────────────────────
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX=100
-
-# ── Security ──────────────────────────────────────────
-BCRYPT_SALT_ROUNDS=12
-SESSION_SECRET=<your_session_secret>
-COOKIE_DOMAIN=localhost
-```
-
-> ⚠️ **Never commit your real `.env` file.** It is already listed in `.gitignore`.
+- Advanced emergency prediction
+- Healthcare demand forecasting
+- IoT-based ambulance monitoring
+- Wearable emergency integration
+- Mobile applications
+- Government healthcare integration
+- Advanced fraud detection
+- AI-powered multilingual assistant
+- Expanded healthcare network
+- Wider geographical coverage
 
 ---
 
-## 📡 API Reference
+## 🎓 Academic Project
 
-The full API is documented via **Swagger UI** at `http://localhost:5000/api-docs` when running locally.
-
-| Module | Base Route | Description |
-|---|---|---|
-| Auth | `POST /api/v1/auth/login` | Login for all user roles |
-| Auth | `POST /api/v1/auth/admin/login` | Admin-only login |
-| Auth | `POST /api/v1/auth/register/individual` | Register individual user |
-| Auth | `POST /api/v1/auth/register/organization` | Register organization |
-| Users | `/api/v1/users` | User profile & management |
-| Emergencies | `/api/v1/emergencies` | SOS dispatch & tracking |
-| Blood | `/api/v1/blood` | Blood requests & donations |
-| Hospitals | `/api/v1/hospitals` | Hospital info & bed management |
-| Ambulances | `/api/v1/ambulances` | Fleet dispatch & booking |
-| Campaigns | `/api/v1/campaigns` | Medical crowdfunding |
-| Medicines | `/api/v1/medicines` | Medicine requests & donations |
-| Equipment | `/api/v1/equipment` | Medical equipment management |
-| Volunteers | `/api/v1/volunteers` | Volunteer tasks & coordination |
-| Admin | `/api/v1/admin` | Platform administration |
-| Analytics | `/api/v1/analytics` | Usage analytics & reports |
-| Notifications | `/api/v1/notifications` | In-app notifications |
-| Chat | `/api/v1/chat` | Community chat rooms |
-| Payments | `/api/v1/payments` | Razorpay payment processing |
-
----
-
-## 🔌 WebSocket Events
-
-Socket.IO powers real-time features across the platform:
-
-| Event | Direction | Description |
-|---|---|---|
-| `emergency:created` | Server → Client | New SOS request broadcast |
-| `emergency:updated` | Server → Client | Emergency status change |
-| `ambulance:location_update` | Client → Server | Driver GPS position update |
-| `ambulance:eta_update` | Server → Client | Updated ETA for patient |
-| `blood:request_created` | Server → Client | New blood request alert |
-| `chat:message` | Bi-directional | Real-time community chat |
-| `chat:typing` | Client → Server | Typing indicator |
-| `chat:read` | Client → Server | Message read receipt |
-| `notification` | Server → Client | Push notification delivery |
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how to get started:
-
-```bash
-# 1. Fork the repository
-# 2. Create your feature branch
-git checkout -b feature/your-amazing-feature
-
-# 3. Commit your changes (use conventional commits)
-git commit -m "feat: add real-time ambulance tracking"
-
-# 4. Push to your branch
-git push origin feature/your-amazing-feature
-
-# 5. Open a Pull Request
-```
-
-### Commit Convention
-
-We use **Conventional Commits**:
-
-| Prefix | Usage |
-|---|---|
-| `feat:` | New feature |
-| `fix:` | Bug fix |
-| `docs:` | Documentation update |
-| `chore:` | Build/config changes |
-| `refactor:` | Code restructure |
-| `test:` | Adding or updating tests |
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
----
-
-<div align="center">
-
-**Built with ❤️ to save lives**
-
-<sub>LifeLineX — Connecting people to emergency care, one second at a time.</sub>
-
-[![GitHub](https://img.shields.io/badge/GitHub-RAGUL--TR07-181717?style=flat-square&logo=github)](https://github.com/RAGUL-TR07/LifeLinex)
-
-</div>
+**LIFELINEX — AI-Powered Emergency Healthcare Platform**
